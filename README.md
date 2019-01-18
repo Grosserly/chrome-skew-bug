@@ -13,5 +13,5 @@ My attempt at an explanation:
 
 ---
 
-##Demo here (activates immediately)
+## Demo here (activates immediately)
 [https://grosserly.github.io/render-breaker/break.html](https://grosserly.github.io/render-breaker/)
