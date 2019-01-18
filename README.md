@@ -7,9 +7,12 @@ My attempt at an explanation:
 3. The 90deg skew goes under the radar, Chrome tries to render it, and madness ensues.
 
 ## Found to cause problems with:
-- Chrome on Chrome OS
+- Chrome (on Chrome OS)
+- Chrome (on Windows 7)
 - Chrome for Android
-- Chrome on Windows 7
+
+## Found to _not_ cause problems with:
+- Firefox Quantum (on Windows 10) - looks kinda weird, but doesn't demolish the whole page
 
 ---
 
