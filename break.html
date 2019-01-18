@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Renderbreaker</title>
+  </head>
+  <body>
+
+    <div id='page-breaker'>
+    
+      <div id='pb-payload'></div>
+      
+      <style id='pb-style' style='display:block' contenteditable>
+        #pb-payload {
+          transform: skew(57deg); /* Arbitrary number; can be anything other than a multiple of 90 */
+          width:1px;
+          height:1px;
+          background:#fff;
+        }
+      </style>
+      
+    </div>
+    
+    <script type="text/javascript">
+      let pbstyle = document.getElementById("pb-style");
+      pbstyle.innerHTML = pbstyle.innerHTML.replace("57", "90");
+    </script>
+
+
+  </body>
+</html>
