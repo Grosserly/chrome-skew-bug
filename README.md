@@ -10,3 +10,8 @@ My attempt at an explanation:
 - Chrome on Chrome OS
 - Chrome for Android
 - Chrome on Windows 7
+
+---
+
+##Demo here (activates immediately)
+[https://grosserly.github.io/render-breaker/break.html](https://grosserly.github.io/render-breaker/)
