@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Renderbreaker</title>
+    <title>Chrome Skew Bug</title>
   </head>
   <body>
 
-    <div id='page-breaker'>
+    <div id="skewbug-container">
     
-      <div id='pb-payload'></div>
+      <div id="skewbug-payload"></div> /* <!-- The element that gets skewed -->
       
-      <style id='pb-style' style='display:block' contenteditable>
-        #pb-payload {
+      <style id="skewbug-style">
+        #skewbug-payload {
           transform: skew(57deg); /* Arbitrary number; can be anything other than a multiple of 90 */
           width:1px;
           height:1px;
@@ -21,7 +21,7 @@
     </div>
     
     <script type="text/javascript">
-      let pbstyle = document.getElementById("pb-style");
+      let pbstyle = document.getElementById("skewbug-style");
       pbstyle.innerHTML = pbstyle.innerHTML.replace("57", "90");
     </script>
 
