@@ -23,8 +23,10 @@
     
     
     <script type="text/javascript">
-      let skewbugStyle = document.getElementById("skewbug-style");
-      skewbugStyle.innerHTML = skewbugStyle.innerHTML.replace("57", "90");
+      document.addEventListener("DOMContentLoaded", function() {
+        let skewbugStyle = document.getElementById("skewbug-style");
+        skewbugStyle.innerHTML = skewbugStyle.innerHTML.replace("57", "90");
+      });
     </script>
     
     
