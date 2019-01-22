@@ -4,10 +4,11 @@
     <title>Chrome Skew Bug</title>
   </head>
   <body>
-
+    
     <div id="skewbug-container">
     
-      <div id="skewbug-payload"></div> <!-- The element that gets skewed -->
+      <!-- The element that gets skewed -->
+      <div id="skewbug-payload"></div>
       
       <style id="skewbug-style">
         #skewbug-payload {
@@ -19,6 +20,10 @@
       </style>
       
     </div>
+    
+    <!-- Something to look at while reality unravels around you -->
+    <iframe style="width:100%; height:800px" src="https://www.lipsum.com/"></iframe>
+
     
     <script type="text/javascript">
       let skewbugStyle = document.getElementById("skewbug-style");
