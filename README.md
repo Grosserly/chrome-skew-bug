@@ -1,11 +1,13 @@
 # Chrome Skew Bug
 Breaks a tab's rendering in Chrome by setting an element's skew to 90deg in a weird way.
 
-If what I've gathered from [a look at the Chromium source](https://cs.chromium.org/chromium/src/ui/gfx/transform.cc?q=skew&sq=package:chromium&dr=CSs&l=203):
+[A look at the Chromium source](https://cs.chromium.org/chromium/src/ui/gfx/transform.cc?q=skew&sq=package:chromium&dr=CSs&l=203) suggests:
 - Chrome calculates the tangent of the parameters passed into `skew()`
 - `TanDegrees(90)` is `undefined`
 - Chrome seems to catch this under most circumstances, but here it doesn't properly do so
 - The renderer breaks down as things go looking for a number and get `undefined` instead
+
+It's possible that this isn't the only place in the code that this can happen. I suspect other places where trigonometric functions are used might also be vulnerable.
 
 ~~My attempt at an explanation:~~
 1. ~~Chrome knows rendering an element with `transform: skew(90deg)` messes things up, so it catches when a website tries to do so and just doesn't display the element.~~
