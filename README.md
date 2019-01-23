@@ -3,7 +3,7 @@ Breaks a tab's rendering in Chrome by setting an element's skew to 90deg in a we
 
 [A look at the Chromium source](https://cs.chromium.org/chromium/src/ui/gfx/transform.cc?q=skew&sq=package:chromium&dr=CSs&l=203) suggests:
 - Chrome calculates the tangent of the parameters passed into `skew()`
-- The Tangent of 90 degrees is `undefined`
+- The tangent of 90 degrees is `undefined`
 - Chrome seems to catch this under most circumstances, but for some reason it doesn't properly do so here
 - The renderer breaks down as things go looking for a number and get `undefined` instead
 
