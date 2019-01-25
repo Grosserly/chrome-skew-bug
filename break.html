@@ -2,15 +2,8 @@
 <html>
   <head>
     <title>Chrome Skew Bug</title>
-  </head>
-  <body>
-    
-    <div id="skewbug-container">
-    
-      <!-- The element that gets skewed -->
-      <div id="skewbug-payload"></div>
-      
-      <style id="skewbug-style">
+
+      <style>
         #skewbug-payload {
           transform: skew(57deg); /* Arbitrary number; can be anything other than a multiple of 90 */
           width:1px;
@@ -18,17 +11,21 @@
           background:#fff;
         }
       </style>
-      
-    </div>
-    
-    
+
+  </head>
+  <body>
+
+    <!-- The element that gets skewed -->
+    <div id="skewbug-payload"></div>
+
     <script type="text/javascript">
-      setTimeout( function() {
+      setTimeout(function () {
         
         // Detonator switch
-        let skewbugStyle = document.getElementById("skewbug-style");
+        let skewbugStyle = document.getElementsByTagName("style")[0];
+		    alert("Breaktime");
         skewbugStyle.innerHTML = skewbugStyle.innerHTML.replace("57", "90");
-        
+
       }, 5000 );
     </script>
     
